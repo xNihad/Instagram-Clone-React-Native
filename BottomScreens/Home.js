@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView,ActivityIndicator,TouchableOpacity
 import { useState } from 'react';
 import TopHeaderz from '../components/TopHeader';
 import Story from '../components/Stories';
+import Post from '../components/Posts'
 
 
 function Home({navigation}){
@@ -11,6 +12,7 @@ function Home({navigation}){
      
     <TopHeaderz navigation={navigation}/>
     <Story />
+    <Post />
 
     <StatusBar />
     </SafeAreaView>

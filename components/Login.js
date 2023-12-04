@@ -1,20 +1,17 @@
-import { View, Text,TextInput, TouchableOpacity } from 'react-native'
+import { View, Text,TextInput, StyleSheet,TouchableOpacity } from 'react-native'
 import React, {useState} from 'react'
 
 const Login = () => {
 
-  cosnt [email,setEmail]=useState('')
-  const [password,setPassword]= useState('')
+ 
 
-  const signIn = async ()=>{
-    
-  }
+  
   return (
     <View style={styles.container}>
         <TextInput placeholder='Email' />
         <TextInput placeholder='Password' secureTextEntry />
 
-        <TouchableOpacity onPress={signIn}>
+        <TouchableOpacity  >
         <Text>Login</Text>
         </TouchableOpacity>
       

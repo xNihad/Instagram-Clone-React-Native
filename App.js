@@ -1,20 +1,7 @@
-import { SafeAreaView, Image ,StyleSheet } from 'react-native';
+import { SafeAreaView, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import firebase from 'firebase'
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBsIB2kMDXUMxUCZbhQtv5jJK3Y1dcfQ5A",
-  authDomain: "instagram-fire-4d10d.firebaseapp.com",
-  projectId: "instagram-fire-4d10d",
-  storageBucket: "instagram-fire-4d10d.appspot.com",
-  messagingSenderId: "162368022852",
-  appId: "1:162368022852:web:d1ded997a303ca883acf11",
-  measurementId: "G-38ZSZ7H294"
-};
-
 
 
 import HomeScreen from './BottomScreens/Home'

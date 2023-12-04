@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image, StyleSheet} from 'react-native'
 import React from 'react'
 const postDatas=[
     {
@@ -9,10 +9,10 @@ const postDatas=[
 ]
 const Post = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <View>
      <Image />
-     <Text></Text>
+     <Text>fddfdfdvvfvffdfdfdfdfdfdfdf</Text>
       </View>
       
     </View>
@@ -20,3 +20,11 @@ const Post = () => {
 }
 
 export default Post
+const styles = StyleSheet.create({
+  container:{
+    position:'absolute',
+    
+    
+    
+  }
+})
