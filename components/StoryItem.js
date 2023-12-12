@@ -11,9 +11,9 @@ const Stori = ({namez, imagez,isSeenz,isYouz,relatedUrlz}) => {
     <View>
        <TouchableOpacity onPress={openWebsite}>
        <View>
-        <Image source={{uri:imagez}} style={{width:80,height:80, borderRadius:41, marginHorizontal:7, borderWidth:3, borderColor: isSeenz ? "gray" : "#C837AB"}} />
-      { isYouz && <Image source={plusIcon} style={styles.PlusIcon}/>
-
+        <Image source={{uri:imagez}} style={{width:80,height:80, borderRadius:31, marginHorizontal:7, borderWidth:3, borderColor: isSeenz ? "gray" : "#C837AB"}} />
+      { 
+      isYouz && <Image source={plusIcon} style={styles.PlusIcon}/>
       }
       </View>
       <Text style={{textAlign:'center'}}>{namez}</Text>

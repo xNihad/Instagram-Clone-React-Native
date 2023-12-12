@@ -23,7 +23,7 @@ const Stack = createNativeStackNavigator();
 
 function BotScreen(){
   return (
-    <Tab.Navigator screenOptions={{tabBarShowLabel:true, headerShown:false}}>
+    <Tab.Navigator screenOptions={{tabBarShowLabel:true, headerShown:false, tabBarActiveTintColor:'red', tabBarInactiveTintColor:'green'}}>
 
       <Tab.Screen name="Home" component={HomeScreen} options={{tabBarIcon:({focused,color})=>{
         return <Image style={{height:30, width:30}} source={require('./assets/home.png')}/>

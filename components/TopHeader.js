@@ -13,7 +13,7 @@ const TopHeaderz = ({navigation}) => {
               <Image source={require('../assets/IG-logo-helper-icon.png')}/>               
             </TouchableOpacity>
         </View>
-        <View style={styles.igLogosZ}>
+        <View style={styles.igLogos}>
         <TouchableOpacity style={styles.hc} onPress={()=> navigation.navigate('Notification')}>
             <Image source={require('../assets/Heart-Icon.png')}/>
         </TouchableOpacity>
@@ -36,9 +36,6 @@ const styles = StyleSheet.create({
     },
     igLogos:{
      flexDirection:'row',
-    },
-    igLogosZ:{
-        flexDirection:'row', 
     },
     hc:{
         marginHorizontal:12

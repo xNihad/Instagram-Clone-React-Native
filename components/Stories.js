@@ -51,7 +51,7 @@ const datas = [
 const Story = () => {
     
   return (
-    <View>
+    <View style={{height:100}}>
      <FlatList
       horizontal 
       data={datas} 
