@@ -7,6 +7,10 @@ const Register = () => {
 
   return (
     <View style={styles.container}>
+      <TextInput placeholder='Email' />
+        <TextInput placeholder='Password' secureTextEntry />
+        <TextInput placeholder='Email' />
+        <TextInput placeholder='Password' secureTextEntry />
       <TouchableOpacity>
         <Text>Sign Up</Text>
         </TouchableOpacity>

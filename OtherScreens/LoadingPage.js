@@ -13,7 +13,7 @@ const LoadingPage = ({navigation}) => {
   }, 2500)
 }
 useEffect(() => {
-    displayLoad(); // You may call fetchData when the component mounts
+    displayLoad(); 
   }, []);
   return (
     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>

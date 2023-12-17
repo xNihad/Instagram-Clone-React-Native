@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+
 import HomeScreen from './BottomScreens/Home'
 import SearchScreen from './BottomScreens/Search'
 import NewPostScreen from './BottomScreens/NewPost'
@@ -50,7 +51,7 @@ export default function App() {
       <SafeAreaView style={{flex:1}}>
     
       <NavigationContainer>
-       <Stack.Navigator initialRouteName='FirstLoadingPage' screenOptions={{ headerShown: false}}>
+       <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false}}>
        <Stack.Screen name='Login' component={LoginPage} />
        <Stack.Screen name='Register' component={RegisterPage} />
        <Stack.Screen name='FirstLoadingPage' component={LoadPage} />

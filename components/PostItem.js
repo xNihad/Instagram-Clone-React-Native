@@ -5,19 +5,9 @@ import {
   StyleSheet,
   Linking,
   TouchableOpacity,
-  PixelRatio 
+  PixelRatio,
 } from "react-native";
 import React, { useState } from "react";
-import PostDatas from "./PostDatas";
-
-
-const splitText = (text,maxChar) =>{
-  const firstLine = text.slice(0,maxChar)
-  const otherLine = text.slice(maxChar)
-
-
-}
-
 
 const Posti = ({
   names,
@@ -26,7 +16,7 @@ const Posti = ({
   postImages,
   likes,
   comments,
-  post,
+
   isSeens,
 }) => {
   const openPage = () => {
@@ -37,11 +27,7 @@ const Posti = ({
   const [likeFill, setLikeFill] = useState(false);
   const [saveFill, setSaveFill] = useState(false);
 
-  const [moreComment, setMoreComment] = useState(false);
-
-  const textSizeInDIPs = 14 // density-independent pixels (means font size)
-  const pixelSize = PixelRatio.getPixelSizeForLayoutSize( names * textSizeInDIPs)
-
+  const [moreComment, setMoreComment] = useState(moreComment);
 
   return (
     <View style={{ width: 390 }}>
@@ -137,26 +123,35 @@ const Posti = ({
         </View>
 
         <View style={{ marginTop: 5 }}>
-          <TouchableOpacity>
-            <Text style={{ marginLeft: 12, fontSize: 13, fontWeight: 600 }}>
-              {likes} likes
-            </Text>
-          </TouchableOpacity>
-          <View style={{ flexDirection: "row" }}>
+          <View>
             <TouchableOpacity>
-              <Text style={{ marginLeft: 12, fontSize: 14, fontWeight: 600 }}>
-                {names}
+              <Text style={{ marginLeft: 12, fontSize: 13, fontWeight: 600 }}>
+                {likes} likes
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={{ marginLeft: 3, fontSize: 14}}  numberOfLines={moreComment ? undefined :2}>{PostDatas.comment}</Text>
-            </TouchableOpacity>
-            {comments.lenght > 40 &&(
-            
-            <TouchableOpacity onPress={()=>setMoreComment(!moreComment)}>
-                <Text style={{fontWeight:200}}>{moreComment ? 'less' : 'more'}</Text>
-            </TouchableOpacity>
-            )}
+          </View>
+
+          <View style={{marginLeft: 12 }}>
+            <View >
+              <TouchableOpacity >
+                <Text style={{ fontSize: 14, fontWeight: 600 }}>
+                  {names}
+                  <Text style={{ fontSize: 13, fontWeight: 400 }}>
+                    {" "}
+                    {moreComment ? comments : comments.slice(0, 80)}
+                    {comments.length > 40 && (
+                      <TouchableOpacity
+                        onPress={() => setMoreComment(!moreComment)}
+                      >
+                        <Text style={{ fontWeight: 200,  fontSize:12, textAlignVertical: 'center', }}>
+                          {moreComment ? "less" : "more"}
+                        </Text>
+                      </TouchableOpacity>
+                    )}
+                  </Text>
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </View>
